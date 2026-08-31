@@ -1,0 +1,5 @@
+**SRR25630385**
+The forward and reverse reads have 4.9 Gbp and 47% GC. Overall good quality data, with some flags for per base sequence content and sequence duplication levels worth noting. The peaks seen in the per base sequence content graph can be attributed to the presence of primers. The peaks seen in the sequence duplication levels graph can be attributed to the data being RNA instead of whole genome. The adpater content is also worth noting, with a ~16% lieklihood that Illlumina Universal adapters are present. 
+
+**SRR25630409**
+The forward and reverse reads have 6.5 Gbp and 46% GC. Overall good quality data, with some flags for per base sequence content and sequence duplication levels worth noting. The peaks seen in the per base sequence content graph can be attributed to the presence of primers. The peaks seen in the sequence duplication levels graph can be attributed to the data being RNA instead of whole genome. The adpater content is also worth noting, with a ~9% lieklihood that Illlumina Universal adapters are present. 
