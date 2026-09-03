@@ -1,0 +1,19 @@
+Part 2 -- Adaptor trimming comparison
+
+What proportion of reads (both R1 and R2) were trimmed?
+
+I looked in the slurm outs after running cutadapt and found info on percentage of reads that had adapters 
+and were therefore trimmed:
+Read 1 with adapter:               7,592,116 (22.9%)
+Read 2 with adapter:               7,416,044 (22.3%)
+
+Report the commands you used, the reasoning behind them, and how you confirmed the adapter sequences.
+
+Based on the FASTQC outputs, there was a high likelihood that the adapters are the Illumina Universial adapters. Additionally
+the methods from the dataset indicated that they used the Illumina HiSeq 4000 sequencing system, which confirmed this. 
+
+Comment on whether you expect R1s and R2s to be adapter-trimmed at different rates and why.
+
+I would expect R1 and R2 to be adapter trimmed at similar rates since they are still looking at the same read
+just from opposite ends. I might expect R2 to be a little different due to R2 typically having a lower 
+sequencing quality than R1 which could impact adapter detection. 
