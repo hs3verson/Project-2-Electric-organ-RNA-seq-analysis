@@ -1,0 +1,79 @@
+Part 3 Alignment and strand-specificity
+---------------------------------------
+To see if the library was stranded or not I looked at the percentage of
+of reads mapped for forward and reverse. If the percentages are similar 
+they are likely not stranded.
+
+mapped for 385 fw:
+
+$ grep -v '^__' Project2_Part3/htseq_385.txt | awk '{sum+=$2} END {print sum}'
+
+mapped = 781064
+
+total for 385 fw:
+
+$ awk '{sum+=$2} END {print sum}' Project2_Part3/htseq_385.txt
+ 
+total = 32872051
+
+percentage mapped for 385 fw:** (781064/32872051) * 100 = 2.376%
+
+mapped for 385 rv:
+  
+$ grep -v '^__' Project2_Part3/htseq_385_rv.txt | awk '{sum+=$2} END {print sum}'
+ 
+mapped = 16425434
+
+total for 385 rv:
+  
+$ awk '{sum+=$2} END {print sum}' Project2_Part3/htseq_385_rv.txt
+ 
+total = 32872051
+
+percentage mapped for 385 rv: (16425434/32872051) * 100 = 49.968%
+
+mapped for 409 fw:
+  
+$ grep -v '^__' Project2_Part3/htseq_409.txt | awk '{sum+=$2} END {print sum}'
+ 
+mapped = 1183962
+
+total for 409 fw:
+  
+$ awk '{sum+=$2} END {print sum}' Project2_Part3/htseq_409.txt
+ 
+total = 43054217
+
+percentage mapped for 409 fw: (1183962/43054217) * 100 = 2.75%
+
+mapped for 409 rv:
+  
+$ grep -v '^__' Project2_Part3/htseq_409_rv.txt | awk '{sum+=$2} END {print sum}'
+ 
+mapped = 21609071
+
+total for 409 rv:
+  
+$ awk '{sum+=$2} END {print sum}' Project2_Part3/htseq_409_rv.txt
+ 
+total = 43054217
+
+percentage mapped for 409 rv: (21609071/43054217) * 100 = 50.19%
+
+Based on these results there is very disproportionate mapping between the forward 
+and reverse strands for both files, indicating that there was strandedness during 
+the RNAseq library prep for this data. Since the reverse files had the significantly 
+higher amount of reads mapped, 49.968% for SRR25630385 and 50.19% for SRR25630409, 
+these data are reverse-strand specific, and the stranded=reverse parameter is 
+appropriate. 
+
+
+
+
+
+
+
+
+
+
+
